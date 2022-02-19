@@ -1,0 +1,1 @@
+`dotnet run` in the file you want to run to see the console

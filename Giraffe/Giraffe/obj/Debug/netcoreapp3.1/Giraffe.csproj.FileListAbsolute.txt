@@ -1,0 +1,13 @@
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.exe
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.deps.json
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.runtimeconfig.json
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.runtimeconfig.dev.json
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.dll
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\bin\Debug\netcoreapp3.1\Giraffe.pdb
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.csprojAssemblyReference.cache
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.AssemblyInfoInputs.cache
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.AssemblyInfo.cs
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.csproj.CoreCompileInputs.cache
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.dll
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.pdb
+C:\Users\juanc\Documents\Udemy\c_sharp_learn\Giraffe\Giraffe\obj\Debug\netcoreapp3.1\Giraffe.genruntimeconfig.cache
