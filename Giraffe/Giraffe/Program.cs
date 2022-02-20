@@ -17,53 +17,56 @@ namespace Giraffe
       bool isMale = true;
       // arrays
       int[] luckyNumbers = { 1, 2, 3, 4, 5 };
-      //   luckyNumbers[luckyNumbers.Length - 1] = 10;
-      //   Console.WriteLine(luckyNumbers[luckyNumbers.Length - 1]); // 10
+      luckyNumbers[luckyNumbers.Length - 1] = 10;
+      Console.WriteLine(luckyNumbers[luckyNumbers.Length - 1]); // 10
 
-      //   string[] friends = new string[2]; // creates an array of 2 strings
-      //   friends[0] = "Jim";
-      //   friends[1] = "Pam";
-      //   // friends[2] = "Michael"; // This will throw an error
-      //   // Console.WriteLine(friends[2]); // This will throw an error
-
-
-      //   Console.WriteLine($"The name is {characterName} age is {characterAge}");
-
-      //   Console.WriteLine(characterName.Contains("h")); // true
-      //   Console.WriteLine(characterName.IndexOf("h")); // 2
-      //   Console.WriteLine(5 / 2); // 2
-      //   Console.WriteLine(5 / 2.0); // 2.5
+      string[] friends = new string[2]; // creates an array of 2 strings
+      friends[0] = "Jim";
+      friends[1] = "Pam";
+      // friends[2] = "Michael"; // This will throw an error
+      // Console.WriteLine(friends[2]); // This will throw an error
 
 
-      //   //   ReadLine keeps the console open until you press enter, and waits for user input
-      //   //   Console.ReadLine();
+      Console.WriteLine($"The name is {characterName} age is {characterAge}");
 
-      //   Console.Write("Enter your name: ");
-      //   string name = Console.ReadLine();
-      //   Console.WriteLine($"Hello {name}");
-      //   Console.Write("Enter number 1: ");
-      //   double num = Convert.ToDouble(Console.ReadLine());
-      //   Console.Write("Enter number 2: ");
-      //   double num2 = Convert.ToDouble(Console.ReadLine());
-      //   Console.WriteLine($"{num} + {num2} = {num + num2}");
-      //   SayHi("Juan"); // Hi Juan
-      //   Console.WriteLine(Cube(5)); // 125
+      Console.WriteLine(characterName.Contains("h")); // true
+      Console.WriteLine(characterName.IndexOf("h")); // 2
+      Console.WriteLine(5 / 2); // 2
+      Console.WriteLine(5 / 2.0); // 2.5
 
-      //   if (isMale)
-      //   {
-      //     Console.WriteLine("You are male");
-      //   }
-      //   isMale = false;
-      //   if (!isMale)
-      //   {
-      //     Console.WriteLine("You are not a male ");
-      //   }
 
-      //   Console.WriteLine(GetMax(4, 10)); // 10
-      //   Console.WriteLine(GetDay(4)); // Thursday
-      //   Console.WriteLine(GetDay(15)); // Invalid Day Number
-      //   WhileLoopEx(2); // 0 1
+      //   ReadLine keeps the console open until you press enter, and waits for user input
+      //   Console.ReadLine();
+
+      Console.Write("Enter your name: ");
+      string name = Console.ReadLine();
+      Console.WriteLine($"Hello {name}");
+      Console.Write("Enter number 1: ");
+      double num = Convert.ToDouble(Console.ReadLine());
+      Console.Write("Enter number 2: ");
+      double num2 = Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine($"{num} + {num2} = {num + num2}");
+      SayHi("Juan"); // Hi Juan
+      Console.WriteLine(Cube(5)); // 125
+
+      if (isMale)
+      {
+        Console.WriteLine("You are male");
+      }
+      isMale = false;
+      if (!isMale)
+      {
+        Console.WriteLine("You are not a male ");
+      }
+
+      Console.WriteLine(GetMax(4, 10)); // 10
+      Console.WriteLine(GetDay(4)); // Thursday
+      Console.WriteLine(GetDay(15)); // Invalid Day Number
+      WhileLoopEx(2); // 0 1
       GuessWordGame();
+      Console.WriteLine(GetPow(2, 3)); // 8
+      twoDimensionalArray();
+      HandleException();
     }
 
     // Methods / Functions
@@ -163,6 +166,53 @@ namespace Giraffe
       }
     }
 
+    static int GetPow(int baseNum, int powNum)
+    {
+      int result = 1;
+      for (int i = 0; i < powNum; i++)
+      {
+        result *= baseNum;
+      }
+
+      return result;
+    }
+
+    static void twoDimensionalArray()
+    {
+      // [,] the comma is the delimiter and lets C# know it is a 2 dimensional array
+      int[,] numberGrid = {
+        { 1, 2 },
+        { 3, 4 },
+        { 5, 6 },
+        { 7, 8 }
+      };
+      Console.WriteLine(numberGrid[0, 0]);  // 1
+      Console.WriteLine(numberGrid[0, 1]);  // 2
+      Console.WriteLine(numberGrid[3, 1]);  // 8
+    }
+
+    static void HandleException()
+    {
+      try
+      {
+        Console.Write("Enter a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter another number: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        // try to divide by 0 or a letter
+        Console.WriteLine(num / num2);
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine(ex.Message);
+      }
+      finally
+      {
+        Console.WriteLine("Finally will always run no matter what");
+      }
+
+
+    }
 
 
   }
