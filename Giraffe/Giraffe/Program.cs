@@ -67,6 +67,44 @@ namespace Giraffe
       Console.WriteLine(GetPow(2, 3)); // 8
       twoDimensionalArray();
       HandleException();
+
+      Book book1 = new Book("Harry Potter", "JK Rowling", 400);
+      // constructor being empty, you can create a new object without having to add values
+      // book1.title = "Harry Potter";
+      // book1.author = "JK Rowling";
+      // book1.pages = 400;
+      // Console.WriteLine(book1.title);
+
+      Student student1 = new Student("Jim", "Business", 3.6);
+      Student student2 = new Student("Pam", "Art", 2.5);
+      // Console.WriteLine(student1.HasHonors()); // true
+      // Console.WriteLine(student2.HasHonors()); // false
+
+      // GETTERS AND SETTERS = prevent direct access to private variables, and allow for more control
+      // you can set default values and prevent wrong values to be entered
+      Movie movie1 = new Movie("Jaws", "Steven Spielberg", "Dog");
+      Movie movie2 = new Movie("Shrek", "Adam Adamson", "PG-13");
+      Console.WriteLine(movie1.GetRating); // NR 
+
+      // static variables are shared by all objects, belongs to the class itself
+      Song song1 = new Song("Given up", "Linkin Park", 200);
+      // Console.WriteLine(Song.songCount); // 1
+      Song song2 = new Song("1000 rounds", "Ghostemane", 150);
+      // Console.WriteLine(Song.songCount); // 2
+      // Console.WriteLine(song1.getAllSongsCount()); // 2
+
+      // STATIC METHODS
+      // by making a method static, you can call it without creating an object
+      UsefulTools.SayHi("Juan"); // "Hello, Juan"
+
+      // INHERITANCE
+      // you can inherit from a class, and use the variables and methods from the parent class
+      Chef chef1 = new Chef();
+      chef1.MakeChicken();
+
+      ItalianChef italianChef1 = new ItalianChef();
+      italianChef1.MakeChicken();
+      italianChef1.MakePasta();
     }
 
     // Methods / Functions
