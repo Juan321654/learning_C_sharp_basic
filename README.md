@@ -9,3 +9,5 @@
      this means that other classes can inherit from this class, but this class cannot be instantiated
 
 `void`: doesnt return any value
+
+`<String>`: needs to import `using System.Collections.Generic;`, this is for dynamic size object, unliked arrays that need to have a set size.

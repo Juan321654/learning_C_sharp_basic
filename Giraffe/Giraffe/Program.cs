@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Giraffe
 {
@@ -29,6 +30,27 @@ namespace Giraffe
       friends[1] = "Pam";
       // friends[2] = "Michael"; // This will throw an error
       // Console.WriteLine(friends[2]); // This will throw an error
+
+      // Lists, lists are dynamic, you can add or remove items from the list
+      // and dont have to know the size of the list
+      // requires the import > using System.Collections.Generic;
+      List<string> friendsList = new List<string>();
+      friendsList.Add("Jim");
+      friendsList.Add("Pam");
+      friendsList.Add("Michael");
+
+      // friendsList.Remove("Jim"); // removes the first instance of "Jim"
+      friendsList.Insert(1, "Mike"); // inserts "Mike" at index 1
+
+
+      Console.WriteLine(friendsList[0]); // Jim
+
+      // Dictionaries, are used to store key value pairs
+      // the key is the name of the item, and the value is the value of the item
+      Dictionary<string, string> phonebook = new Dictionary<string, string>();
+      phonebook.Add("Jim", "555-1234");
+      phonebook.Add("Pam", "555-5678");
+      phonebook.Add("Michael", "555-9012");
 
 
       Console.WriteLine($"The name is {characterName} age is {characterAge}");
