@@ -7,6 +7,7 @@ namespace Giraffe
     public double gpa;
 
     public Student(string aName, string aMajor, double aGpa)
+    // this is the constructor
     {
       name = aName;
       major = aMajor;

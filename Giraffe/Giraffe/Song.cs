@@ -8,6 +8,7 @@ namespace Giraffe
     public static int songCount = 0;
 
     public Song(string aTitle, string aArtist, int aDuration)
+    // this is the constructor
     {
       title = aTitle;
       artist = aArtist;

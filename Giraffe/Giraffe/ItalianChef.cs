@@ -2,6 +2,7 @@ using System;
 
 namespace Giraffe
 {
+  // to inherit from a class, use the : symbol
   class ItalianChef : Chef
   {
     // override keyword allows you to override the method in the base class that has the "virtual" keyword

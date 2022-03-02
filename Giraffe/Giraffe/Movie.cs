@@ -7,6 +7,7 @@ namespace Giraffe
     private string rating;
 
     public Movie(string aTitle, string aDirector, string aRating)
+    // this is the constructor
     {
       title = aTitle;
       director = aDirector;

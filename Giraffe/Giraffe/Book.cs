@@ -12,6 +12,7 @@ namespace Giraffe
     // by having an empty constructor, you can create a new object without having to add values
     public Book () {}
     public Book(string aTitle, string aAuthor, int aPages)
+    // this is the constructor
     {
       title = aTitle;
       author = aAuthor;

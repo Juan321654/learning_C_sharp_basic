@@ -4,6 +4,10 @@ namespace Giraffe
 {
   class Program
   {
+    // STATIC is used to declare a method that can be called without creating an instance of the class.
+    // for example the Math. class, you dont have to do int x = new Math...
+    // isntead you can just call Math.something and thats because of the static keyword
+    // if the static keyword isnt used, you have to create an instance of the class before you can call the method
     static void Main(string[] args)
     {
       // Data types
@@ -105,7 +109,27 @@ namespace Giraffe
       ItalianChef italianChef1 = new ItalianChef();
       italianChef1.MakeChicken();
       italianChef1.MakePasta();
+      Console.WriteLine(CheckOut(5, 8, 1, 10, 50, 20, 15, 80, 99)); // 288
+
+      // OVERLOADED CONSTRUCTOR
+      Pizza pizza = new Pizza("stuffed", "red sauce", "mozzarella", "pepperoni");
+      Pizza pizza2 = new Pizza("not stuffed", "blue sauce", "mozzarella");
+
+      // OBJECT AS ARGUMENT
+      // you can pass an object as an argument to a method
+      Car car1 = new Car("Mustang", "red");
+
+      ChangeColor(car1, "blue");
+
+
     }
+
+    public static void ChangeColor(Car car, string color)
+    {
+      car.color = color;
+    }
+
+
 
     // Methods / Functions
     // void means no return value
@@ -251,7 +275,70 @@ namespace Giraffe
 
 
     }
+    static double CheckOut(params double[] prices)
+    // params means you can pass in any number of arguments
+    // but it must be a single dimensional array
+    {
+      double total = 0;
+      foreach (double price in prices)
+      {
+        total += price;
+      }
+      return total;
+    }
+    // OVERLOADED CLASS means that you can create multiple classes with the same name
+    // but different parameters
+    class Pizza
+    {
+      string bread;
+      string sauce;
+      string cheese;
+      string topping;
 
+      public Pizza(string bread, string sauce, string cheese, string topping)
+      {
+        this.bread = bread;
+        this.sauce = sauce;
+        this.cheese = cheese;
+        this.topping = topping;
+      }
+      public Pizza(string bread, string sauce, string cheese)
+      {
+        this.bread = bread;
+        this.sauce = sauce;
+        this.cheese = cheese;
+      }
 
+    }
+
+    // ABSTRACT CLASSES = modifier that indicates missing compopents or incomplete classes
+    // this means that other classes can inherit from this class, but this class cannot be instantiated
+    // Vehicle someVehicle = new Vehicle(); // error
+    abstract class Vehicle
+    {
+      public int speed = 0;
+
+      public void Go()
+      {
+        Console.WriteLine("The vehicle is going");
+      }
+    }
+
+    class Bike : Vehicle
+    {
+      int wheels = 2;
+    }
+
+  }
+}
+
+class Car
+{
+  public string model;
+  public string color;
+  public Car(string model, string color)
+  {
+    this.model = model;
+    this.color = color;
   }
 }
